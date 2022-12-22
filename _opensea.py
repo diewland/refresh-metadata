@@ -9,8 +9,12 @@ def refresh_metadata(contract, from_id, to_id):
 
     for id in range(from_id, to_id+1):
 
+        # craft item url
+        item_url = url.format(contract, id)
+        print(item_url)
+
         # browse item
-        driver.get(url.format(contract, id))
+        driver.get(item_url)
 
         # click more
         element = driver.find_element(By.CSS_SELECTOR, '.item--collection-toolbar-wrapper button:nth-child(3)')
