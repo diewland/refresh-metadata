@@ -21,5 +21,5 @@ def refresh_metadata(chain, contract, from_id, to_id):
         time.sleep(3)
 
         # click refresh metadata
-        element = driver.find_element(By.CSS_SELECTOR, '.controls-area i')
+        element = driver.find_element(By.CSS_SELECTOR, 'i.mdi-refresh')
         element.click()
